@@ -1,1 +1,20 @@
-<h1>News app!</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Stay updated with the latest news </title>
+        {% endif %}
+    </head>
+    <body>
+            <!-- Recent news section -->
+            <h3> Recent news</h3>
+             <ul>
+                 {% for recent_news in recent %}
+                    <li>{{ recent_news.title}}</li>
+                {% end for %}
+             </ul>
+    </body>
+</html>
